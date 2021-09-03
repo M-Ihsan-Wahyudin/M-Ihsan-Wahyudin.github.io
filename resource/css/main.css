@@ -28,6 +28,51 @@ html {
   scroll-behavior: smooth;
 }
 
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+#nav .navigation li {
+  margin: 0 .5rem 0 .5rem;
+  display: inline;
+}
+#nav .navigation li a {
+  color: var(--clr-black);
+}
+#nav .navigation li a:hover {
+  color: var(--clr-green);
+}
+#nav .navigation li a.active {
+  color: var(--clr-green);
+}
+#fullpage {
+  height: 100vh;
+  overflow: hidden;
+}
+#fullpage section {
+  height: 100vh;
+}
+#fullpage section:nth-child(1) .wrapper {
+  background-image: url('../images/bg_pattern.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+#fullpage section:nth-child(1) .hero-img {
+  width: 65%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+#fullpage section:nth-child(1) .wrapper main a.btn {
+  box-shadow: -4px 4px 5px rgba(0, 0, 0, 40%);
+}
+
 /* Template */
 .font-green {
   color: var(--clr-green);
@@ -75,48 +120,3 @@ html {
   height: 100vh;
 }
 /* End Template */
-
-#nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-}
-#nav .navigation li {
-  margin: 0 .5rem 0 .5rem;
-  display: inline;
-}
-#nav .navigation li a {
-  color: var(--clr-black);
-}
-#nav .navigation li a:hover {
-  color: var(--clr-green);
-}
-#nav .navigation li a.active {
-  color: var(--clr-green);
-}
-#fullpage {
-  height: 100vh;
-  overflow: hidden;
-}
-#fullpage section {
-  height: 100vh;
-}
-#fullpage section:nth-child(1) .wrapper {
-  /* background-image: url('../images/school-building.png'); */
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#fullpage section:nth-child(1) .hero-img {
-  width: 65%;
-  object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
-#fullpage section:nth-child(1) .wrapper main a.btn {
-  box-shadow: -4px 4px 5px rgba(0, 0, 0, 40%);
-}
