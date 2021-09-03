@@ -7,6 +7,7 @@
   --clr-green: #26BC9F;
   --clr-white: #F3F6F7;
   --clr-black: #232A34;
+  --clr-gray: #7E8DA4;
 
   --font-main: 'Poppins';
 }
@@ -28,32 +29,50 @@ html {
 }
 
 /* Template */
-.text-green {
+.font-green {
   color: var(--clr-green);
 }
-.text-white {
+.font-white {
   color: var(--clr-white);
 }
-.text-black {
+.font-black {
   color: var(--clr-black);
 }
-.text-sm {
+.font-gray {
+  color: var(--clr-gray);
+}
+.font-sm {
   font-size: .75rem;
 }
-.text-md {
+.font-md {
   font-size: 1.15rem;
 }
-.text-lg {
+.font-lg {
   font-size: 1.5rem;
 }
-.bg-green {
+.font-xl {
+  font-size: 2rem;
+}
+.font-2xl {
+  font-size: 2.5rem;
+}
+.font-4xl {
+  font-size: 3rem;
+}
+.my-bg-green {
   background-color: var(--clr-green);
 }
-.bg-white {
+.my-bg-white {
   background-color: var(--clr-white);
 }
-.bg-black {
+.my-bg-black {
   background-color: var(--clr-black);
+}
+.w-screen {
+  width: 100vh;
+}
+.h-screen {
+  height: 100vh;
 }
 /* End Template */
 
@@ -85,7 +104,7 @@ html {
   height: 100vh;
 }
 #fullpage section:nth-child(1) .wrapper {
-  background-image: url('../images/school-building.png');
+  /* background-image: url('../images/school-building.png'); */
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,4 +116,7 @@ html {
   bottom: 0;
   right: 0;
   z-index: 1;
+}
+#fullpage section:nth-child(1) .wrapper main a.btn {
+  box-shadow: -4px 4px 5px rgba(0, 0, 0, 40%);
 }
