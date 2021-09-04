@@ -7,68 +7,154 @@
   <title>Static Web</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <!-- My Style -->
   <link rel="stylesheet" href="resource/css/main.css">
+  <link rel="stylesheet" href="resource/css/component.css">
 </head>
 <body>
   <header id="nav" class="my-bg-white d-flex">
-    <div class="container p-1 d-flex justify-content-between">
+    <div class="container p-2 d-flex justify-content-between">
       <div class="logo d-flex">
-        <img class="m-1" src="resource/images/smakzie_logo.svg" alt="SMKN 1 Cianjur">
-        <span class="m-1 d-flex flex-column justify-content-center">
-          <p class="font-green font-md m-0">SMK NEGERI 1 CIANJUR</p>
-          <p class="font-black font-sm m-0">The right place to get succes for The future</p>
+        <img src="resource/images/smakzie_logo.svg" alt="SMK Negeri 1 Cianjur">
+        <span class="mx-2 d-flex flex-column justify-content-center">
+          <span class="font-green font-sm-2 font-md-2 font-lg-3">SMK NEGERI 1 CIANJUR</span>
+          <span class="font-black font-sm-1 font-md-1 font-lg-2">The Right Place To Get Success For The Future</span>
         </span>
       </div>
-      <div class="d-flex align-items-center">
-        <ul class="navigation m-0">
-          <li>
-            <a class="active" href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Class</a>
-          </li>
-          <li>
-            <a href="#">Map</a>
-          </li>
-          <li>
-            <a href="#">Content</a>
-          </li>
-        </ul>
+      <div class="nav-link d-flex align-items-center">
+        <a class="active" href="">Home</a>
+        <a href="">Class</a>
+        <a href="">Map</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="sidebar-btn">
+        <span class="d-flex align-items-center h-100">
+          <i class="bi bi-list-ul font-sm-3 hover-pointer toggle-sidebar"></i>
+        </span>
       </div>
     </div>
   </header>
 
+  <div id="sidebar" class="p-2">
+    <div class="toggle-wrap d-flex justify-content-end">
+      <i class="bi bi-x font-sm-5 hover-pointer hover-rotate-90 toggle-sidebar"></i>
+    </div>
+    <div class="sidebar-nav d-flex flex-column justify-content-center align-items-center">
+      <a class="active" href="">Home</a>
+      <a href="">Class</a>
+      <a href="">Map</a>
+      <a href="">Contact</a>
+    </div>
+  </div>
+
   <div id="fullpage">
     <!-- section 1 -->
     <section class="my-bg-white position-relative">
-      <div class="wrapper h-screen">
-        <div class="container h-screen d-flex align-items-center">
-          <main>
-            <h2 class="font-4xl font-black fw-bold">
+      <div class="container">
+        <div class="row">
+          <main class="col-lg-4 col-md-8 col-11 absolute-y-center z-20">
+            <h2 class="font-lg-6 font-black fw-bold">
               The Right place <br>
               To get Success
             </h2>
-            <p class="font-md font-gray">
-              SMK NEGERI 1 CIANJUR YANG BERBASIS TEKNOLOGI <br> 
-              INFORMASI MENGHASILKAN LULUSAN YANG JUARA <br>
-              LAHIR BATIN, MANDIRI, INOVATIF, KOLABORATIF, DAN <br>
+            <p class="font-lg-3 font-gray">
+              SMK NEGERI 1 CIANJUR YANG BERBASIS TEKNOLOGI
+              INFORMASI MENGHASILKAN LULUSAN YANG JUARA
+              LAHIR BATIN, MANDIRI, INOVATIF, KOLABORATIF, DAN
               BERAKHLAKUL KARIMAH.
             </p>
             <a href="#" class="btn my-bg-green px-4 py-2 font-white rounded-0">Details</a>
           </main>
         </div>
       </div>
-      <img class="hero-img" src="resource/images/school-building.png">
+      <div class="row">
+        <div class="bg-img-1 col-lg-8 col-md-9 col-12 position-absolute bottom-0 right-0">
+          <img src="resource/images/school-building.png">
+        </div>
+      </div>
+      <div class="bg-img-2 position-absolute top-0 bottom-0 left-0 right-0"></div>
     </section>
+    
     <!-- section 2 -->
-    <section class="my-bg-green"></section>
+    <section class="my-bg-green pt-5">
+      <div class="container pt-5 px-lg-5 d-flex flex-column justify-content-center">
+        <h2 class="font-4xl font-white text-center">Informasi Seputar <b>SMK Negeri 1 Cianjur</b></h2>
+        <div class="row my-3">
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="row my-5">
+              <div class="col-5">
+                <img src="resource/images/Icon1.svg">
+              </div>
+              <div class="col-7">
+                <h3 class="font-white"><strong>Aplikatif</strong></h3>
+                <span class="font-white">
+                  Program Pendidikan yang Berorentasi Pada Dunia Kerja Dengan Kurikulum Sesuai Kebutuhan Industri
+                </span>
+              </div>
+            </div>
+            <div class="row my-5">
+              <div class="col-5">
+                <img src="resource/images/Icon2.svg">
+              </div>
+              <div class="col-7">
+                <h3 class="font-white"><strong>Religius</strong></h3>
+                <span class="font-white">
+                  Pendidikan Agamis dan Berakhlak Mulia Menjadi Bagian Integral Dalam Setiap Pembelajaran
+                </span>
+              </div>
+            </div>
+            <div class="row my-5">
+              <div class="col-5">
+                <img src="resource/images/Icon3.svg">
+              </div>
+              <div class="col-7">
+                <h3 class="font-white"><strong>Social</strong></h3>
+                <span class="font-white">
+                  Kemampuan Bersosialisasi dan Beradaptasi Dalam Lingkungan Kerja Menjadi Nilai Tambah Siswa
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-12 col-sm-12 position-relative d-md-none d-sm-none d-lg-inline">
+            <div class="pict-1 position-absolute">
+
+            </div>
+            <div class="pict-2">
+
+            </div>
+            <div class="pict-3 position-absolute">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="my-bg-green pt-5">
+      <div class="container h-screen pt-5 px-lg-5 d-flex flex-column justify-content-center">
+        <div class="row d-lg-none d-md-inline d-sm-inline">
+          <div class="col-12 position-relative">
+            <div class="pict-1 position-absolute">
+
+            </div>
+            <div class="pict-2">
+
+            </div>
+            <div class="pict-3 position-absolute">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-  <!-- Code Here -->
   
   <script src="vendors/jquery/js/jquery-3.6.0.min.js"></script>
   <script src="vendors/plugin/fullpage/js/jquery.fullpage.js"></script>
   <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="resource/js/main.js"></script>
+  <script src="resource/js/component.js"></script>
 </body>
 </html>
