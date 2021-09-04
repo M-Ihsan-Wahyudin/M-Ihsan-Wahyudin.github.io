@@ -88,10 +88,12 @@ html {
   object-fit: cover;
 }
 .card-wrap {
+  margin: .5rem 0 .5rem 0;
+  box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 20%);
   border-radius: 2rem;
 }
 .card-img {
-  height: 12rem;
+  height: 15rem;
 }
 .card-img img {
   object-fit: cover;

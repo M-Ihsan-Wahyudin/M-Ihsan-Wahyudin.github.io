@@ -3,6 +3,9 @@
   --clr-white: #F3F6F7;
   --clr-black: #232A34;
   --clr-gray: #7E8DA4;
+  --clr-pink: #F1409A;
+  --clr-blue: #36ABC7;
+  --clr-dark-red: #BD1616;
 
   --font-size-1: .5rem;
   --font-size-2: .75rem;
@@ -24,6 +27,45 @@
 }
 .font-gray {
   color: var(--clr-gray);
+}
+.font-pink {
+  color: var(--clr-pink);
+}
+.font-blue {
+  color: var(--clr-blue);
+}
+.font-dark-red {
+  color: var(--clr-dark-red);
+}
+.border-green {
+  border-color: var(--clr-green);
+}
+.border-white {
+  border-color: var(--clr-white);
+}
+.border-black {
+  border-color: var(--clr-black);
+}
+.border-gray {
+  border-color: var(--clr-gray);
+}
+.border-pink {
+  border-color: var(--clr-pink);
+}
+.border-blue {
+  border-color: var(--clr-blue);
+}
+.border-dark-red {
+  border-color: var(--clr-dark-red);
+}
+.radius-1 {
+  border-radius: 1rem;
+}
+.radius-2 {
+  border-radius: 2rem;
+}
+.radius-3 {
+  border-radius: 3rem;
 }
 .my-bg-green {
   background-color: var(--clr-green);
