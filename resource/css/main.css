@@ -131,6 +131,24 @@ html {
   #sidebar {
     display: none;
   }
+  .pict-1 {
+    width: 12rem;
+    height: 14rem;
+    background-color: var(--clr-white);
+    transform: rotate(-30deg);
+  }
+  .pict-2 {
+    width: 18rem;
+    height: 15rem;
+    background-color: var(--clr-white);
+    transform: rotate(-8deg);
+  }
+  .pict-3 {
+    width: 12rem;
+    height: 14rem;
+    background-color: var(--clr-white);
+    transform: rotate(15deg);
+  }
   .picture {
     display: none;
   }
