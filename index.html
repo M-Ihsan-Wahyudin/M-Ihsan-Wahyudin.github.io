@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="resource/css/component.css">
 </head>
 <body>
-  <header id="nav" class="my-bg-white d-flex">
+  <header id="nav" class="d-flex bg-white">
     <div class="container p-2 d-flex justify-content-between">
       <div class="logo d-flex">
         <img src="resource/images/smakzie_logo.svg" alt="SMK Negeri 1 Cianjur">
@@ -30,15 +30,15 @@
       </div>
       <div class="sidebar-btn">
         <span class="d-flex align-items-center h-100">
-          <i class="bi bi-list-ul font-sm-3 hover-pointer toggle-sidebar"></i>
+          <i class="bi bi-list-ul font-sm-4 hover-pointer toggle-sidebar"></i>
         </span>
       </div>
     </div>
   </header>
 
-  <div id="sidebar" class="p-2">
+  <div id="sidebar" class="p-2 z-20">
     <div class="toggle-wrap d-flex justify-content-end">
-      <i class="bi bi-x font-sm-5 hover-pointer hover-rotate-90 toggle-sidebar"></i>
+      <i class="bi bi-x font-sm-6 hover-pointer hover-rotate-90 toggle-sidebar"></i>
     </div>
     <div class="sidebar-nav d-flex flex-column justify-content-center align-items-center">
       <a class="active" href="">Home</a>
@@ -48,14 +48,16 @@
     </div>
   </div>
 
-  <div id="fullpage">
-    <!-- section 1 -->
-    <section class="my-bg-white position-relative">
-      <div class="container">
-        <div class="row">
-          <main class="col-lg-4 col-md-8 col-11 absolute-y-center z-20">
+  <section class="h-screen">
+    <div class="position-absolute z-1">
+      <img class="h-100 w-100" src="resource/images/bg_pattern.png">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-5 h-screen d-flex align-items-center">
+          <main>
             <h2 class="font-lg-6 font-black fw-bold">
-              The Right place <br>
+              The Right place
               To get Success
             </h2>
             <p class="font-lg-3 font-gray">
@@ -67,92 +69,74 @@
             <a href="#" class="btn my-bg-green px-4 py-2 font-white rounded-0">Details</a>
           </main>
         </div>
-      </div>
-      <div class="row">
-        <div class="bg-img-1 col-lg-8 col-md-9 col-12 position-absolute bottom-0 right-0">
-          <img src="resource/images/school-building.png">
+        <div class="col-12 col-md-4 col-lg-7">
+          <img class="hero-img position-absolute bottom-0 right-0" src="resource/images/school-building.svg">
         </div>
       </div>
-      <div class="bg-img-2 position-absolute top-0 bottom-0 left-0 right-0"></div>
-    </section>
-    
-    <!-- section 2 -->
-    <section class="my-bg-green pt-5">
-      <div class="container pt-5 px-lg-5 d-flex flex-column justify-content-center">
-        <h2 class="font-4xl font-white text-center">Informasi Seputar <b>SMK Negeri 1 Cianjur</b></h2>
-        <div class="row my-3">
-          <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="row my-5">
-              <div class="col-5">
-                <img src="resource/images/Icon1.svg">
-              </div>
-              <div class="col-7">
-                <h3 class="font-white"><strong>Aplikatif</strong></h3>
-                <span class="font-white">
-                  Program Pendidikan yang Berorentasi Pada Dunia Kerja Dengan Kurikulum Sesuai Kebutuhan Industri
-                </span>
-              </div>
-            </div>
-            <div class="row my-5">
-              <div class="col-5">
-                <img src="resource/images/Icon2.svg">
-              </div>
-              <div class="col-7">
-                <h3 class="font-white"><strong>Religius</strong></h3>
-                <span class="font-white">
-                  Pendidikan Agamis dan Berakhlak Mulia Menjadi Bagian Integral Dalam Setiap Pembelajaran
-                </span>
-              </div>
-            </div>
-            <div class="row my-5">
-              <div class="col-5">
-                <img src="resource/images/Icon3.svg">
-              </div>
-              <div class="col-7">
-                <h3 class="font-white"><strong>Social</strong></h3>
-                <span class="font-white">
-                  Kemampuan Bersosialisasi dan Beradaptasi Dalam Lingkungan Kerja Menjadi Nilai Tambah Siswa
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7 col-md-12 col-sm-12 position-relative d-md-none d-sm-none d-lg-inline">
-            <div class="pict-1 position-absolute">
-
-            </div>
-            <div class="pict-2">
-
-            </div>
-            <div class="pict-3 position-absolute">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3 -->
-    <section class="my-bg-green pt-5">
-      <div class="container h-screen pt-5 px-lg-5 d-flex flex-column justify-content-center">
-        <div class="row d-lg-none d-md-inline d-sm-inline">
-          <div class="col-12 position-relative">
-            <div class="pict-1 position-absolute">
-
-            </div>
-            <div class="pict-2">
-
-            </div>
-            <div class="pict-3 position-absolute">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
   
+  <section class="my-bg-green">
+    <div class="container py-3">
+      <h2 class="font-lg-5 font-white text-center">Informasi Seputar <b>SMK Negeri 1 Cianjur</b></h2>
+      <div class="row">
+        <div class="col-12 col-lg-5 order-lg-0 order-md-1 order-sm-1">
+          <div class="row col-12 my-3 moto">
+            <div class="col-5">
+              <img src="resource/images/Icon1.svg">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center">
+              <h3 class="font-white"><strong>Aplikatif</strong></h3>
+              <p class="font-white font-sm-2">
+                Program Pendidikan yang Berorentasi Pada Dunia Kerja Dengan Kurikulum Sesuai Kebutuhan Industri
+              </p>
+            </div>
+          </div>
+          <div class="row col-12 my-3 moto">
+            <div class="col-5">
+              <img src="resource/images/Icon2.svg">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center">
+              <h3 class="font-white"><strong>Religius</strong></h3>
+              <p class="font-white font-sm-2">
+                Pendidikan Agamis dan Berakhlak Mulia Menjadi Bagian Integral Dalam Setiap Pembelajaran
+              </p>
+            </div>
+          </div>
+          <div class="row col-12 my-3 moto">
+            <div class="col-5">
+              <img src="resource/images/Icon3.svg">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center">
+              <h3 class="font-white"><strong>Social</strong></h3>
+              <p class="font-white font-sm-2">
+                Kemampuan Bersosialisasi dan Beradaptasi Dalam Lingkungan Kerja Menjadi Nilai Tambah Siswa
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7 order-lg-1 order-md-0 order-sm-0 my-5 my-lg-0">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <div class="pict-1 px-2 pt-2 pb-4 z-1">
+              <img src="resource/images/img1.jpg">
+            </div>
+            <div class="pict-2 px-3 py-2 z-2">
+              <img src="resource/images/img2.jpg">
+            </div>
+            <div class="pict-3 px-2 pt-2 pb-4 z-1">
+              <img src="resource/images/img3.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    
+  </section>
+
   <script src="vendors/jquery/js/jquery-3.6.0.min.js"></script>
-  <script src="vendors/plugin/fullpage/js/jquery.fullpage.js"></script>
   <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="resource/js/main.js"></script>
   <script src="resource/js/component.js"></script>
