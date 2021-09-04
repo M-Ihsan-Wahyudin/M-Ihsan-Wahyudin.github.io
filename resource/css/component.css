@@ -5,6 +5,7 @@
   --clr-gray: #7E8DA4;
   --clr-pink: #F1409A;
   --clr-blue: #36ABC7;
+  --clr-dark-blue: #206DA8;
   --clr-dark-red: #BD1616;
 
   --font-size-1: .5rem;
@@ -37,6 +38,9 @@
 .font-dark-red {
   color: var(--clr-dark-red);
 }
+.font-dark-blue {
+  color: var(--clr-dark-blue);
+}
 .border-green {
   border-color: var(--clr-green);
 }
@@ -57,6 +61,9 @@
 }
 .border-dark-red {
   border-color: var(--clr-dark-red);
+}
+.border-dark-blue {
+  border-color: var(--clr-dark-blue);
 }
 .radius-1 {
   border-radius: 1rem;
@@ -136,6 +143,12 @@
   z-index: 20;
 }
 /* Hover Efect */
+.hover-font-white:hover {
+  color: var(--clr-white);
+}
+.hover-font-green:hover {
+  color: var(--clr-green);
+}
 .hover-pointer:hover {
   cursor: pointer;
 }
@@ -156,6 +169,30 @@
 }
 .hover-rotate-180:hover {
   transform: rotate(180deg);
+}
+.hover-bg-green:hover {
+  background-color: var(--clr-green);
+}
+.hover-bg-white:hover {
+  background-color: var(--clr-white);
+}
+.hover-bg-black:hover {
+  background-color: var(--clr-black);
+}
+.hover-bg-gray:hover {
+  background-color: var(--clr-gray);
+}
+.hover-bg-pink:hover {
+  background-color: var(--clr-pink);
+}
+.hover-bg-blue:hover {
+  background-color: var(--clr-blue);
+}
+.hover-bg-dark-red:hover {
+  background-color: var(--clr-dark-red);
+}
+.hover-bg-dark-blue:hover {
+  background-color: var(--clr-dark-blue);
 }
 @media (min-width: 1028px) {
   .font-lg-1 {
