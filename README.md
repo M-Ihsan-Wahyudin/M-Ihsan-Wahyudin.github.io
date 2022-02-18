@@ -1,2 +1,5 @@
-# static-web
-<a href="https:\\M-Ihsan-Wahyudin.github.io">View Page</a>
+<p align="center">
+  **ZieWEB**
+  <br>
+  <a href="https:\\ihsanwahyudin.github.io">View Page</a>
+</p>
