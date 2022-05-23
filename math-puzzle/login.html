@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Middleware -->
     <script>
       (async function () {
         const user = await JSON.parse(localStorage.getItem("DataUser"));
         if (user) window.location.href = "./lobby.html";
       })();
     </script>
+    <!-- Font Family -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
     </style>
-    <link rel="stylesheet" href="./assets/css/tailwind-element.min.css" />
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="./assets/vendors/tailwind-elements/tailwind-element.min.css" />
+    <script src="./assets/vendors/tailwind-elements/tailwind-element.min.js"></script>
+    <script src="./assets/vendors/tailwind/tailwindcss.js"></script>
+    <script src="https://kit.fontawesome.com/942cc2153b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <script src="./assets/js/tailwindcss.js"></script>
-    <script
-      src="https://kit.fontawesome.com/942cc2153b.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/tailwind-element.min.js"></script>
-    <title>Login | Math Puzzle</title>
+    <title>Math Puzzle</title>
   </head>
   <body class="bg-[#202020]">
     <section

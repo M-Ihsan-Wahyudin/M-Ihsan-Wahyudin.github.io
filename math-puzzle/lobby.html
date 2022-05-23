@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html xml:lang>
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Middleware -->
   <script>
     (async function () {
       const user = await JSON.parse(localStorage.getItem("DataUser"));
       if (!user) window.location.href = "./login.html";
     })();
   </script>
+  <!-- Font Family -->
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
   </style>
-  <link rel="stylesheet" href="./assets/css/tailwind-element.min.css" />
-  <link rel="stylesheet" href="./assets/css/index.css" />
-  <script src="./assets/js/tailwindcss.js"></script>
+
+  <!-- Vendors -->
+  <link rel="stylesheet" href="./assets/vendors/tailwind-elements/tailwind-element.min.css" />
+  <script src="./assets/vendors/tailwind-elements/tailwind-element.min.js"></script>
+  <script src="./assets/vendors/tailwind/tailwindcss.js"></script>
   <script src="https://kit.fontawesome.com/942cc2153b.js" crossorigin="anonymous"></script>
-  <script src="./assets/js/tailwind-element.min.js"></script>
-  <script src="./assets/js/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <script src="./assets/vendors/momentjs/moment.min.js"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <title>Math Puzzle</title>
 </head>
 
 <body class="bg-[#202020]">
@@ -189,7 +196,7 @@
             data-question-level="6">
             6
           </div>
-          <div class="sm:col-start-3 col-span-2">
+          <div class="sm:col-start-3 col-span-2 mt-5 xl:mt-0">
             <button type="button" class="w-full bg-blue-500 rounded-md hover:ring-2 ring-white px-4 py-2"
               id="play-games">
               Play
@@ -198,7 +205,7 @@
         </div>
         <div>
           <div class="xl:mx-10 w-full mt-5 xl:mt-0">
-            <h3 class="text-2xl text-white mb-6 -ml-3">History</h3>
+            <h3 class="text-2xl text-white mb-6">History</h3>
             <section id="history">
               
             </section>
