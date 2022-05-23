@@ -16,8 +16,6 @@ const user = JSON.parse(localStorage.getItem("DataUser"));
 const username = document.getElementById("username");
 let isCorrect = false;
 
-console.log(popoverToggle)
-
 username.innerHTML = user?.name;
 
 for (const item of questionItems) {
@@ -53,6 +51,25 @@ for (const item of answerItems) {
         puzzleAnswer.children[position]
       );
   });
+
+  item.addEventListener('touchstart', function(e){
+    console.log(e)
+    e.dataTransfer.setData("answer", this.dataset.answer);
+    answerItemsTemp = this;
+    setTimeout(() => this.remove(), 0);
+  })
+  item.addEventListener('touchend', function(){
+    const position = this.dataset.position;
+    if (!isCorrect && !this.getAttribute("answered"))
+      puzzleAnswer.insertBefore(
+        answerItemsTemp,
+        puzzleAnswer.children[position]
+      );
+  })
+
+  item.addEventListener('touchmove', function(e){
+    console.log(e);
+  })
 }
 
 function updateGameData(selectedGameData) {
