@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const gameData = JSON.parse(localStorage.getItem("GameData")) || [];
+      const checkStatus = gameData.find((game) => game.game_status === "progress" || game.game_status === "start");
+      if (!checkStatus) {
+        window.location.href = "./lobby.html";
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+    </style>
+    <link rel="stylesheet" href="./assets/css/tailwind-element.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/js/tailwindcss.js"></script>
+    <script
+      src="https://kit.fontawesome.com/942cc2153b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/tailwind-element.min.js"></script>
+  </head>
+  <body class="bg-[#202020]">
+    <div id="app">
+      <div
+        id="navbar"
+        class="flex justify-between w-full sticky top-0 p-2 md:px-10 text-white gap-5 z-10 bg-[#202020]"
+      >
+        <div class="flex-none flex items-center">Math Puzzle</div>
+        <div class="grow">
+          <div class="max-w-fit float-right">
+            <div class="grid grid-cols-4 gap-5">
+              <div class="col-span-3 flex justify-end items-center">
+                <p class="truncate" id="username">Muhammad Ihsan Wahyudin</p>
+              </div>
+              <div class="relative flex justify-center hover:cursor-pointer" data-popover-toggle="false">
+                <img
+                  draggable="false"
+                  class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                  src="./assets/images/avatar/SVG/avatar1.svg"
+                  alt="users"
+                />
+                <div
+                  class="popup absolute bg-[#303030] rounded-md px-4 py-2 top-0 mt-14 right-0 invisible"
+                >
+                  <button class="bg-red-500 rounded-md px-4 py-2 text-sm hover:bg-red-600 focus:ring-2 ring-white w-40" id="out-game">Exit Game</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="content" class="mt-5 px-3 sm:px-10">
+        <div class="grid grid-cols-2">
+          <div class="flex justify-start text-white">
+            Score &nbsp;<span id="score">0</span>
+          </div>
+          <div class="flex justify-end text-white gap-2" id="health">
+            <i class="fa-solid fa-heart text-[#DE3535]"></i>
+            <i class="fa-solid fa-heart text-[#DE3535]"></i>
+            <i class="fa-solid fa-heart text-[#DE3535]"></i>
+          </div>
+        </div>
+        <div class="mt-5">
+          <div class="text-center text-white">
+            Carilah nilai yang sesuai dengan kotak puzzle berikut !
+          </div>
+          <div class="mx-auto" style="max-width: 65vh">
+            <div
+              class="grid grid-cols-3 text-white mt-5 gap-1 bg-white p-1"
+              id="puzzle-question"
+            >
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                1
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                2
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                3
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                4
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                5
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                6
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                7
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                8
+              </div>
+              <div
+                class="puzzle-question-item text-center aspect-square flex items-center justify-center bg-[#202020]"
+              >
+                9
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 bg-white/30 p-2 rounded-md">
+          <div class="overflow-x-scroll scroll-none">
+            <div
+              class="flex gap-2 w-max mx-auto text-white"
+              id="puzzle-answer"
+            >
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                1
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                2
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                3
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                4
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                5
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                6
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                7
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                8
+              </div>
+              <div
+                class="puzzle-answer-item flex-none w-20 sm:w-32 aspect-square bg-[#202020] rounded-sm flex items-center justify-center"
+                draggable="true"
+              >
+                9
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal -->
+
+    <div
+      class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+      id="modal-game-over"
+      tabindex="-1"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-modal="true"
+      role="dialog"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none"
+      >
+        <div
+          class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-[#202020] bg-clip-padding rounded-sm outline-none text-white"
+        >
+          <button type="button" class="modal-toggle" data-bs-toggle="modal" data-bs-target="#modal-game-over"></button>
+          <div class="modal-body relative p-4">
+            <p class="text-4xl text-center uppercase">Game Over</p>
+            <table class="flex justify-center my-10">
+              <tr>
+                <td class="pr-5">Total Score</td>
+                <td class="end-score">0</td>
+              </tr>
+            </table>
+            <div class="flex justify-center gap-2">
+              <button class="py-2 px-4 bg-emerald-500 rounded-sm text-sm back-to-lobby" type="button">Kembali</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+      id="modal-game-end"
+      tabindex="-1"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-modal="true"
+      role="dialog"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none"
+      >
+        <div
+          class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-[#202020] bg-clip-padding rounded-sm outline-none text-white"
+        >
+          <button type="button" class="modal-toggle" data-bs-toggle="modal" data-bs-target="#modal-game-end"></button>
+          <div class="modal-body relative p-4">
+            <p class="text-4xl text-center uppercase">Game End</p>
+            <table class="flex justify-center my-10">
+              <tr>
+                <td class="pr-5">Total Score</td>
+                <td class="end-score">0</td>
+              </tr>
+            </table>
+            <div class="flex justify-center gap-2">
+              <button class="py-2 px-4 bg-emerald-500 rounded-sm text-sm back-to-lobby" type="button">Kembali</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button type="button" class="mx-auto my-5 px-4 py-2 bg-red-500 rounded-md" id="out-game">Keluar</button> -->
+
+    
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>

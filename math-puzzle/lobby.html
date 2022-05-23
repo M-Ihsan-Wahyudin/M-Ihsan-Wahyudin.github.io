@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (async function () {
+      const user = await JSON.parse(localStorage.getItem("DataUser"));
+      if (!user) window.location.href = "./login.html";
+    })();
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+  </style>
+  <link rel="stylesheet" href="./assets/css/tailwind-element.min.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <script src="./assets/js/tailwindcss.js"></script>
+  <script src="https://kit.fontawesome.com/942cc2153b.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/tailwind-element.min.js"></script>
+  <script src="./assets/js/moment.min.js"></script>
+</head>
+
+<body class="bg-[#202020]">
+  <div id="app" class="min-h-screen relative">
+    <div id="navbar" class="flex justify-between w-full sticky top-0 p-2 md:px-10 text-white gap-5 z-10 bg-[#202020]">
+      <div class="flex-none flex items-center">Math Puzzle</div>
+      <div class="grow">
+        <div class="max-w-fit float-right">
+          <div class="grid grid-cols-4 gap-5">
+            <div class="col-span-3 flex justify-end items-center">
+              <p class="truncate" id="username">Muhammad Ihsan Wahyudin</p>
+            </div>
+            <div class="relative flex justify-center hover:cursor-pointer" data-popover-toggle="false">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                src="./assets/images/avatar/SVG/avatar1.svg" alt="users" />
+              <div class="popup absolute bg-[#303030] rounded-md px-4 py-2 top-0 mt-14 right-0 invisible">
+                <button class="bg-red-500 rounded-md px-4 py-2 text-sm hover:bg-red-600 focus:ring-2 ring-white w-40"
+                  id="logout">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="xl:px-5 w-full text-white absolute" style="min-height: calc(100% - 4rem)">
+      <div class="grid grid-cols-1 xl:grid-cols-3 p-5 text-center">
+        <div class="xl:col-span-2 grid grid-cols-2 xl:grid-cols-6 xl:gap-5 gap-2">
+          <div class="xl:col-start-3 col-span-2">Choose Questions</div>
+          <div
+            class="question-type-item xl:col-start-1 bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="addiction">
+            <div>
+              <i class="fa-solid fa-plus text-3xl"></i>
+            </div>
+            <div class="text-sm">Addiction</div>
+          </div>
+          <div
+            class="question-type-item bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="subtraction">
+            <div>
+              <i class="fa-solid fa-minus text-3xl"></i>
+            </div>
+            <div class="text-sm">Subtraction</div>
+          </div>
+          <div
+            class="question-type-item relative bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white">
+            <div class="absolute inset-0 bg-black/50 flex justify-center items-center">
+              Maintenance
+            </div>
+            <div>
+              <i class="fa-solid fa-x text-3xl"></i>
+              <i class="fa-solid fa-equals text-3xl"></i>
+              <i class="fa-solid fa-question text-3xl"></i>
+            </div>
+            <div class="text-sm">Mixed Equations</div>
+          </div>
+          <div
+            class="question-type-item relative bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white">
+            <div class="absolute inset-0 bg-black/50 flex justify-center items-center">
+              Maintenance
+            </div>
+            <div>
+              <span class="text-4xl">a</span>
+              <i class="fa-solid fa-plus text-3xl"></i>
+              <span class="text-4xl">b</span>
+            </div>
+            <div class="text-sm">Number Properties</div>
+          </div>
+          <div
+            class="question-type-item relative bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white">
+            <div class="absolute inset-0 bg-black/50 flex justify-center items-center">
+              Maintenance
+            </div>
+            <div>
+              <span class="text-4xl">2,3,4</span>
+            </div>
+            <div class="text-sm">Number Patterns</div>
+          </div>
+          <div
+            class="question-type-item relative bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white">
+            <div class="absolute inset-0 bg-black/50 flex justify-center items-center">
+              Maintenance
+            </div>
+            <div>
+              <span class="text-4xl">123</span>
+            </div>
+            <div class="text-sm">Number Counting</div>
+          </div>
+          <div
+            class="question-type-item bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="division">
+            <div>
+              <i class="fa-solid fa-divide text-3xl"></i>
+            </div>
+            <div class="text-sm">Division</div>
+          </div>
+          <div
+            class="question-type-item bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="multiplication">
+            <div>
+              <i class="fa-solid fa-x text-3xl"></i>
+            </div>
+            <div class="text-sm">Multiplication</div>
+          </div>
+          <div
+            class="question-type-item bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="fractions">
+            <div>
+              <span class="text-4xl"><sup>1</sup>&frasl;<sub>4</sub></span>
+            </div>
+            <div class="text-sm">Fractions</div>
+          </div>
+          <div
+            class="question-type-item bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="decimals">
+            <div>
+              <span class="text-4xl">0.17</span>
+            </div>
+            <div class="text-sm">Decimals</div>
+          </div>
+          <div
+            class="question-type-item bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white"
+            data-question-type="ratios">
+            <div>
+              <span class="text-4xl">2:4</span>
+            </div>
+            <div class="text-sm">Ratios</div>
+          </div>
+          <div
+            class="question-type-item relative bg-blue-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex flex-col items-center justify-center hover:cursor-pointer hover:ring-2 ring-white">
+            <div class="absolute inset-0 bg-black/50 flex justify-center items-center">
+              Maintenance
+            </div>
+            <div>
+              <span class="text-4xl">x + y</span>
+            </div>
+            <div class="text-sm">Algebra</div>
+          </div>
+          <div class="xl:col-start-3 col-span-2">Choose Level</div>
+          <div
+            class="question-level-item col-start-1 bg-emerald-500 rounded-md aspect-[5/2] xl:aspect-[5/3] flex items-center justify-center hover:cursor-pointer hover:ring-2 ring-white text-4xl"
+            data-question-level="1">
+            1
+          </div>
+          <div
+            class="question-level-item bg-yellow-400 rounded-md aspect-[5/2] xl:aspect-[5/3] flex items-center justify-center hover:cursor-pointer hover:ring-2 ring-white text-4xl"
+            data-question-level="2">
+            2
+          </div>
+          <div
+            class="question-level-item bg-amber-500 rounded-md aspect-[5/2] xl:aspect-[5/3] flex items-center justify-center hover:cursor-pointer hover:ring-2 ring-white text-4xl"
+            data-question-level="3">
+            3
+          </div>
+          <div
+            class="question-level-item bg-red-500 rounded-md aspect-[5/2] xl:aspect-[5/3] flex items-center justify-center hover:cursor-pointer hover:ring-2 ring-white text-4xl"
+            data-question-level="4">
+            4
+          </div>
+          <div
+            class="question-level-item bg-purple-700 rounded-md aspect-[5/2] xl:aspect-[5/3] flex items-center justify-center hover:cursor-pointer hover:ring-2 ring-white text-4xl"
+            data-question-level="5">
+            5
+          </div>
+          <div
+            class="question-level-item bg-indigo-700 rounded-md aspect-[5/2] xl:aspect-[5/3] flex items-center justify-center hover:cursor-pointer hover:ring-2 ring-white text-4xl"
+            data-question-level="6">
+            6
+          </div>
+          <div class="sm:col-start-3 col-span-2">
+            <button type="button" class="w-full bg-blue-500 rounded-md hover:ring-2 ring-white px-4 py-2"
+              id="play-games">
+              Play
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="mx-10 w-full">
+            <h3 class="text-2xl text-white mb-6 -ml-3">History</h3>
+            <section id="history">
+              
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <footer class="w-full p-5 bg-[#303030] text-center text-white text-sm">
+    Copyright 2022 &copy; Ihsan Wahyudin
+  </footer>
+  <script src="./assets/js/lobby.js"></script>
+</body>
+
+</html>

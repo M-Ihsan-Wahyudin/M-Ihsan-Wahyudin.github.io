@@ -1,0 +1,20 @@
+.scroll-none::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media (min-width: 768px) {
+  body * {
+    font-size: 20px;
+  }
+}
+* {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+}
+
+i {
+  line-height: unset !important;
+}
+
+/*# sourceMappingURL=index.css.map */
