@@ -38,6 +38,9 @@ class Games {
 
   addScore() {
     this.score += Math.round(11.1)
+    if(this.score == 99) {
+      this.score = 100;
+    }
     this.setGameScore()
   }
 
